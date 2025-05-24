@@ -9,8 +9,7 @@
       "License" shall mean the terms and conditions for use, reproduction,
       and distribution as defined by Sections 1 through 10 of this document.
 
-      "Licensor" shall mean IronWill Interactive (formerly PGD) and any
-      individuals or entities listed in the collaborators list.
+      "Licensor" shall mean IronWill Interactive (formerly PGD).
 
       "You" (or "Your") shall mean an individual or Legal Entity
       exercising permissions granted by this License.
@@ -18,8 +17,8 @@
       "Work" shall mean the code and documentation made available under
       this License.
 
-      "Derivative Works" shall mean any work based upon the Work, except
-      those that remain separable or merely link to the interfaces of the Work.
+      "Derivative Works" shall mean any work based upon the Work, including but not limited to
+      any derivitive works that may or may not remain separable or merely link to the interfaces of the Work.
 
    2. Grant of Copyright License.
       Subject to the terms of this License, each Contributor hereby grants
@@ -37,15 +36,15 @@
       licensable by such Contributor that are necessarily infringed by
       their Contribution(s) alone or by combination with the Work.
 
-   4. Redistribution.
-      You may reproduce and distribute copies of the Work or Derivative Works
-      in any medium, with or without modifications, provided that You:
-      (a) give recipients a copy of this License;
-      (b) cause any modified files to carry prominent notices stating that You
-          changed the files;
-      (c) retain all copyright, patent, trademark, and attribution notices;
-      (d) if the Work includes a NOTICE file, include its contents in all
-          Derivative Works.
+  4. Redistribution.
+   You may not reproduce, distribute, or publicly display the Work or any Derivative Works in any form or medium except as expressly permitted by IronWill Interactive (FKA PGD) and the collaborators list. The following exceptions apply:
+   (a) IronWill Interactive and any individuals or entities on the collaborators list may reproduce and distribute the Work and Derivative Works in Source and Object form.
+   (b) Licensees with explicit written authorization may distribute unmodified Object-form copies solely for demonstration, testing, or evaluation.
+   (c) All redistributed copies must include a copy of this License and retain all copyright, patent, trademark, and attribution notices.
+   (d) Any modified files must carry prominent notices stating that You changed the files and identify the modifier.
+   (e) If the Work includes a NOTICE file, its contents must be included in all distributed copies.
+   (f) Sale or commercial distribution of the Work or Derivative Works is strictly prohibited.
+
 
    5. Submission of Contributions.
       Unless You explicitly state otherwise, any Contribution intentionally
@@ -82,7 +81,7 @@
    END OF TERMS AND CONDITIONS
 
 
-      Copyright 2025 IronWill Interactive FKA PGD
+      Copyright 2025 IronWill Interactive (formerly) PGD
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
