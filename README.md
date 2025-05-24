@@ -28,9 +28,10 @@
 
 ## 🚀 Installation
 
-1. Download or clone this repository.  
+1. Visit the [Newest Release](https://github.com/gamedev44/ARFB/releases) and download the latest `.zip`.  
 2. In Blender: **Edit → Preferences → Add-ons → Install…**  
-3. Select `action_recorder.zip` (or the folder) and enable **Action Recorder**.  
+3. Select the downloaded file and enable **Action Recorder**.  
+
 
 ## 📖 Usage
 
