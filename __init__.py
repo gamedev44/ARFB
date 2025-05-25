@@ -28,7 +28,7 @@ class DOPESHEET_PT_ARFB(bpy.types.Panel):
     bl_description = "Action Recorder for Blender (ARFB)"
     bl_space_type = 'DOPESHEET_EDITOR'
     bl_region_type = 'UI'
-    bl_category = "Animation"
+    bl_category = "Action Recorder"
     bl_context = "action"
     @classmethod
     def poll(cls, context):
