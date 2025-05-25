@@ -36,55 +36,55 @@ class DOPESHEET_PT_ARFB(bpy.types.Panel):
 
     def draw(self, context):
         col = self.layout.column(align=True)
-        col.prop(context.scene, "rtmanim_time_property")
+        col.prop(context.scene, "actionedit_time_property")
         row = col.row(align=True)
-        row.operator("transform.rtmanim_move", text="L", icon=TRANSFORM_OT_rtmanim_move.pic_shown)
-        row.operator("transform.rtmanim_rotate", text="R", icon=TRANSFORM_OT_rtmanim_rotate.pic_shown)
-        row.operator("transform.rtmanim_scale", text="S", icon=TRANSFORM_OT_rtmanim_scale.pic_shown)
+        row.operator("transform.actionedit_move", text="L", icon=TRANSFORM_OT_actionedit_move.pic_shown)
+        row.operator("transform.actionedit_rotate", text="R", icon=TRANSFORM_OT_actionedit_rotate.pic_shown)
+        row.operator("transform.actionedit_scale", text="S", icon=TRANSFORM_OT_actionedit_scale.pic_shown)
         row = col.row(align=True)
-        row.prop(context.scene, "rtmanim_lkeyframe_frequency_property")
-        row.prop(context.scene, "rtmanim_rkeyframe_frequency_property")
-        row.prop(context.scene, "rtmanim_skeyframe_frequency_property")
+        row.prop(context.scene, "actionedit_lkeyframe_frequency_property")
+        row.prop(context.scene, "actionedit_rkeyframe_frequency_property")
+        row.prop(context.scene, "actionedit_skeyframe_frequency_property")
         row = col.row(align=True)
-        row.operator("transform.rtmanim_keyframe_insert_prev_location", text = "Prev")
-        row.operator("transform.rtmanim_keyframe_insert_next_location", text = "Next")
-        row.operator("transform.rtmanim_keyframe_insert_prev_rotation", text = "Prev")
-        row.operator("transform.rtmanim_keyframe_insert_next_rotation", text = "Next")
-        row.operator("transform.rtmanim_keyframe_insert_prev_scale", text = "Prev")
-        row.operator("transform.rtmanim_keyframe_insert_next_scale", text = "Next")    
+        row.operator("transform.actionedit_keyframe_insert_prev_location", text = "Prev")
+        row.operator("transform.actionedit_keyframe_insert_next_location", text = "Next")
+        row.operator("transform.actionedit_keyframe_insert_prev_rotation", text = "Prev")
+        row.operator("transform.actionedit_keyframe_insert_next_rotation", text = "Next")
+        row.operator("transform.actionedit_keyframe_insert_prev_scale", text = "Prev")
+        row.operator("transform.actionedit_keyframe_insert_next_scale", text = "Next")    
         row = col.row(align=True)
-        row.operator("transform.rtmanim_keyframe_sel_location", text="Sel", icon=TRANSFORM_OT_rtmanim_keyframe_sel_location.pic_shown)
-        row.operator("transform.rtmanim_keyframe_sel_rotation", text="Sel", icon=TRANSFORM_OT_rtmanim_keyframe_sel_rotation.pic_shown)
-        row.operator("transform.rtmanim_keyframe_sel_scale", text="Sel", icon=TRANSFORM_OT_rtmanim_keyframe_sel_scale.pic_shown)
+        row.operator("transform.actionedit_keyframe_sel_location", text="Sel", icon=TRANSFORM_OT_actionedit_keyframe_sel_location.pic_shown)
+        row.operator("transform.actionedit_keyframe_sel_rotation", text="Sel", icon=TRANSFORM_OT_actionedit_keyframe_sel_rotation.pic_shown)
+        row.operator("transform.actionedit_keyframe_sel_scale", text="Sel", icon=TRANSFORM_OT_actionedit_keyframe_sel_scale.pic_shown)
         row = col.row(align=True)
-        row.operator("transform.rtmanim_keyframe_dsel_location", text="Dsel", icon=TRANSFORM_OT_rtmanim_keyframe_dsel_location.pic_shown)
-        row.operator("transform.rtmanim_keyframe_dsel_rotation", text="Dsel", icon=TRANSFORM_OT_rtmanim_keyframe_dsel_rotation.pic_shown)
-        row.operator("transform.rtmanim_keyframe_dsel_scale", text="Dsel", icon=TRANSFORM_OT_rtmanim_keyframe_dsel_scale.pic_shown)
+        row.operator("transform.actionedit_keyframe_dsel_location", text="Dsel", icon=TRANSFORM_OT_actionedit_keyframe_dsel_location.pic_shown)
+        row.operator("transform.actionedit_keyframe_dsel_rotation", text="Dsel", icon=TRANSFORM_OT_actionedit_keyframe_dsel_rotation.pic_shown)
+        row.operator("transform.actionedit_keyframe_dsel_scale", text="Dsel", icon=TRANSFORM_OT_actionedit_keyframe_dsel_scale.pic_shown)
         row = col.row(align=True)
-        row.operator("transform.rtmanim_keyframe_del_location", text="Del", icon=TRANSFORM_OT_rtmanim_keyframe_del_location.pic_shown)
-        row.operator("transform.rtmanim_keyframe_del_rotation", text="Del", icon=TRANSFORM_OT_rtmanim_keyframe_del_rotation.pic_shown)
-        row.operator("transform.rtmanim_keyframe_del_scale", text="Del", icon=TRANSFORM_OT_rtmanim_keyframe_del_scale.pic_shown)
-        col.operator("transform.rtmanim_stop_all", text="Stop All", icon='QUIT')
+        row.operator("transform.actionedit_keyframe_del_location", text="Del", icon=TRANSFORM_OT_actionedit_keyframe_del_location.pic_shown)
+        row.operator("transform.actionedit_keyframe_del_rotation", text="Del", icon=TRANSFORM_OT_actionedit_keyframe_del_rotation.pic_shown)
+        row.operator("transform.actionedit_keyframe_del_scale", text="Del", icon=TRANSFORM_OT_actionedit_keyframe_del_scale.pic_shown)
+        col.operator("transform.actionedit_stop_all", text="Stop All", icon='QUIT')
 
         col = self.layout.column(align=True)
-        col.prop(context.scene, "rtmanim_keyframe_info_property")
-        col.operator("transform.rtmanim_info", text="Keyframe Info", icon=TRANSFORM_OT_rtmanim_info.pic_shown)
+        col.prop(context.scene, "actionedit_keyframe_info_property")
+        col.operator("transform.actionedit_info", text="Keyframe Info", icon=TRANSFORM_OT_actionedit_info.pic_shown)
  
         col = self.layout.column(align=True)
-        col.prop(context.scene, "rtmanim_smooth_follow_factor_property")
+        col.prop(context.scene, "actionedit_smooth_follow_factor_property")
         row = col.row(align=True)
-        row.prop(context.scene, "rtmanim_smooth_follow_x_property")
-        row.prop(context.scene, "rtmanim_smooth_follow_y_property")
-        row.prop(context.scene, "rtmanim_smooth_follow_z_property")
-        col.operator("transform.rtmanim_smooth_follow", text="Smooth Follow", icon=TRANSFORM_OT_rtmanim_smooth_follow.pic_shown)
+        row.prop(context.scene, "actionedit_smooth_follow_x_property")
+        row.prop(context.scene, "actionedit_smooth_follow_y_property")
+        row.prop(context.scene, "actionedit_smooth_follow_z_property")
+        col.operator("transform.actionedit_smooth_follow", text="Smooth Follow", icon=TRANSFORM_OT_actionedit_smooth_follow.pic_shown)
      
 ################################################################
 #Modal keyframing and time advance operator. Used for recording
 #location, rotation, scale. Uses a "singleton modal loop".
 ################################################################
-class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_modal_kf_and_tm(bpy.types.Operator):
     bl_label = "Action Recorder operator"
-    bl_idname = "transform.rtmanim_modal_kf_and_tm"
+    bl_idname = "transform.actionedit_modal_kf_and_tm"
     bl_description = "Action Recorder operator"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
@@ -98,9 +98,9 @@ class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
         cls.op_running=False
         cls.anim_data_paths.clear()
         #deactivate buttons
-        TRANSFORM_OT_rtmanim_move.deactivate()
-        TRANSFORM_OT_rtmanim_rotate.deactivate()
-        TRANSFORM_OT_rtmanim_scale.deactivate()
+        TRANSFORM_OT_actionedit_move.deactivate()
+        TRANSFORM_OT_actionedit_rotate.deactivate()
+        TRANSFORM_OT_actionedit_scale.deactivate()
         
     #keyframe insertion
     anim_data_paths=set()
@@ -148,8 +148,8 @@ class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
 
         #setup initial keyframe insertion, frame advancement
         cls.insert_stationary_keyframes=True
-        cls.loops_remaining = context.scene.rtmanim_time_property
-        cls.remembered_time_property = context.scene.rtmanim_time_property
+        cls.loops_remaining = context.scene.actionedit_time_property
+        cls.remembered_time_property = context.scene.actionedit_time_property
         cls.init_modal_update=True
         
         #initialize prev coords for object at cls.objects[0]
@@ -203,9 +203,9 @@ class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
             ####################
             if pass_through:
                 #check if time factor changed, updat if so (do only once to not waste cpu work)
-                if cls.remembered_time_property!=context.scene.rtmanim_time_property:
-                    cls.loops_remaining = context.scene.rtmanim_time_property
-                    cls.remembered_time_property = context.scene.rtmanim_time_property
+                if cls.remembered_time_property!=context.scene.actionedit_time_property:
+                    cls.loops_remaining = context.scene.actionedit_time_property
+                    cls.remembered_time_property = context.scene.actionedit_time_property
                 #insert keyframes when time slider isn't moving (do only once to not waste cpu work)
                 if cls.insert_stationary_keyframes:
                     for obj in cls.objects:
@@ -252,15 +252,15 @@ class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
             if cls.loops_remaining < 1: 
                 context.scene.frame_set(context.scene.frame_current+1)
                 cls.remembered_frame = context.scene.frame_current
-                cls.loops_remaining = context.scene.rtmanim_time_property
+                cls.loops_remaining = context.scene.actionedit_time_property
                 #delete previous location keyframes that are not needed
-                if ('location' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.rtmanim_lkeyframe_frequency_property!=0):
+                if ('location' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.actionedit_lkeyframe_frequency_property!=0):
                     for obj in cls.objects: obj.keyframe_delete(data_path='location', frame=context.scene.frame_current-1)
                 #delete previous rotation keyframes that are not needed
-                if ('r' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.rtmanim_rkeyframe_frequency_property!=0):
+                if ('r' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.actionedit_rkeyframe_frequency_property!=0):
                     for obj in cls.objects: obj.keyframe_delete(data_path=cls.get_rotation_anim_data_path(obj.rotation_mode), frame=context.scene.frame_current-1)
                 #delete previous scale keyframes that are not needed
-                if ('scale' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.rtmanim_skeyframe_frequency_property!=0):
+                if ('scale' in cls.anim_data_paths) and ((context.scene.frame_current-cls.start_frame-1)%context.scene.actionedit_skeyframe_frequency_property!=0):
                     for obj in cls.objects: obj.keyframe_delete(data_path='scale', frame=context.scene.frame_current-1)
                 #done deleting keyframes
             else: cls.loops_remaining-=1
@@ -281,9 +281,9 @@ class TRANSFORM_OT_rtmanim_modal_kf_and_tm(bpy.types.Operator):
 #############################
 #Location recording operator
 #############################
-class TRANSFORM_OT_rtmanim_move(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_move(bpy.types.Operator):
     bl_label = "Record object location"
-    bl_idname = "transform.rtmanim_move"
+    bl_idname = "transform.actionedit_move"
     bl_description = "Record object location"
     bl_options = {'REGISTER'}
     @classmethod
@@ -307,22 +307,22 @@ class TRANSFORM_OT_rtmanim_move(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.stop() #stop keyframe selecting/deselecting
-            TRANSFORM_OT_rtmanim_modal_info_logic.stop() #stop info
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.add_anim_data_path('location')
-            rval = bpy.ops.transform.rtmanim_modal_kf_and_tm('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.stop() #stop keyframe selecting/deselecting
+            TRANSFORM_OT_actionedit_modal_info_logic.stop() #stop info
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.add_anim_data_path('location')
+            rval = bpy.ops.transform.actionedit_modal_kf_and_tm('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
         else:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.remove_anim_data_path('location')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.remove_anim_data_path('location')
             cls.deactivate()
         return {'FINISHED'}
 
 #############################
 #Rotation recording operator
 #############################
-class TRANSFORM_OT_rtmanim_rotate(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_rotate(bpy.types.Operator):
     bl_label = "Record object rotation"
-    bl_idname = "transform.rtmanim_rotate"
+    bl_idname = "transform.actionedit_rotate"
     bl_description = "Record object rotation"
     bl_options = {'REGISTER'}
     @classmethod
@@ -346,22 +346,22 @@ class TRANSFORM_OT_rtmanim_rotate(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.stop()
-            TRANSFORM_OT_rtmanim_modal_info_logic.stop() #stop info
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.add_anim_data_path('r')
-            rval = bpy.ops.transform.rtmanim_modal_kf_and_tm('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.stop()
+            TRANSFORM_OT_actionedit_modal_info_logic.stop() #stop info
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.add_anim_data_path('r')
+            rval = bpy.ops.transform.actionedit_modal_kf_and_tm('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
         else:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.remove_anim_data_path('r')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.remove_anim_data_path('r')
             cls.deactivate()
         return {'FINISHED'}
 
 ##########################
 #Scale recording operator
 ##########################
-class TRANSFORM_OT_rtmanim_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_scale(bpy.types.Operator):
     bl_label = "Record object scale"
-    bl_idname = "transform.rtmanim_scale"
+    bl_idname = "transform.actionedit_scale"
     bl_description = "Record object scale"
     bl_options = {'REGISTER'}
     @classmethod
@@ -385,13 +385,13 @@ class TRANSFORM_OT_rtmanim_scale(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.stop()
-            TRANSFORM_OT_rtmanim_modal_info_logic.stop() #stop info
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.add_anim_data_path('scale')
-            rval = bpy.ops.transform.rtmanim_modal_kf_and_tm('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.stop()
+            TRANSFORM_OT_actionedit_modal_info_logic.stop() #stop info
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.add_anim_data_path('scale')
+            rval = bpy.ops.transform.actionedit_modal_kf_and_tm('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
         else:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.remove_anim_data_path('scale')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.remove_anim_data_path('scale')
             cls.deactivate()
         return {'FINISHED'}
 
@@ -506,99 +506,99 @@ def keyframe_insert(context, anim_data_path, prev_or_next):
 #################################################
 #Previous location keyframe duplication operator
 #################################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_prev_location(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_prev_location(bpy.types.Operator):
     bl_label = "Duplicate previous location keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_prev_location"
+    bl_idname = "transform.actionedit_keyframe_insert_prev_location"
     bl_description = "Duplicate previous location keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'location', 'prev')
         return {'FINISHED'}
 
 #############################################
 #Next location keyframe duplication operator
 #############################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_next_location(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_next_location(bpy.types.Operator):
     bl_label = "Duplicate next location keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_next_location"
+    bl_idname = "transform.actionedit_keyframe_insert_next_location"
     bl_description = "Duplicate next location keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'location', 'next')
         return {'FINISHED'}
 
 #################################################
 #Previous rotation keyframe duplication operator
 #################################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_prev_rotation(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_prev_rotation(bpy.types.Operator):
     bl_label = "Duplicate previous rotation keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_prev_rotation"
+    bl_idname = "transform.actionedit_keyframe_insert_prev_rotation"
     bl_description = "Duplicate previous rotation keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'r', 'prev')
         return {'FINISHED'}
 
 #############################################
 #Next rotation keyframe duplication operator
 #############################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_next_rotation(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_next_rotation(bpy.types.Operator):
     bl_label = "Duplicate next rotation keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_next_rotation"
+    bl_idname = "transform.actionedit_keyframe_insert_next_rotation"
     bl_description = "Duplicate next rotation keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'r', 'next')
         return {'FINISHED'}
 
 ##############################################
 #Previous scale keyframe duplication operator
 ##############################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_prev_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_prev_scale(bpy.types.Operator):
     bl_label = "Duplicate previous scale keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_prev_scale"
+    bl_idname = "transform.actionedit_keyframe_insert_prev_scale"
     bl_description = "Duplicate previous scale keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'scale', 'prev')
         return {'FINISHED'}
 
 ##########################################
 #Next scale keyframe duplication operator
 ##########################################
-class TRANSFORM_OT_rtmanim_keyframe_insert_next_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_insert_next_scale(bpy.types.Operator):
     bl_label = "Duplicate next scale keyframe"
-    bl_idname = "transform.rtmanim_keyframe_insert_next_scale"
+    bl_idname = "transform.actionedit_keyframe_insert_next_scale"
     bl_description = "Duplicate next scale keyframe"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
     def poll(cls, context): return True
     def execute(self, context):
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
         keyframe_insert(context, 'scale', 'next')
         return {'FINISHED'}
 
 ###############################################################################################
 #Modal operator with keyframe selecting/deselecting/erasing logic, uses a singleton modal loop
 ###############################################################################################
-class TRANSFORM_OT_rtmanim_modal_keyframe_sel(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_modal_keyframe_sel(bpy.types.Operator):
     bl_label = "Action Recorder operator"
-    bl_idname = "transform.rtmanim_modal_keyframe_sel"
+    bl_idname = "transform.actionedit_modal_keyframe_sel"
     bl_description = "Action Recorder operator"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
@@ -612,15 +612,15 @@ class TRANSFORM_OT_rtmanim_modal_keyframe_sel(bpy.types.Operator):
         cls.op_running=False
         cls.anim_data_paths_actions.clear()
         #deactivate buttons
-        TRANSFORM_OT_rtmanim_keyframe_sel_location.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_sel_rotation.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_sel_scale.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_dsel_location.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_dsel_rotation.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_dsel_scale.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_del_location.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_del_rotation.deactivate()
-        TRANSFORM_OT_rtmanim_keyframe_del_scale.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_sel_location.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_sel_rotation.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_sel_scale.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_dsel_location.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_dsel_rotation.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_dsel_scale.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_del_location.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_del_rotation.deactivate()
+        TRANSFORM_OT_actionedit_keyframe_del_scale.deactivate()
 
     #controls
     objects=None
@@ -773,9 +773,9 @@ class TRANSFORM_OT_rtmanim_modal_keyframe_sel(bpy.types.Operator):
 #############################
 #Location keyframe selecting
 #############################
-class TRANSFORM_OT_rtmanim_keyframe_sel_location(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_sel_location(bpy.types.Operator):
     bl_label = "Select location keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_sel_location"
+    bl_idname = "transform.actionedit_keyframe_sel_location"
     bl_description = "Select location keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -799,23 +799,23 @@ class TRANSFORM_OT_rtmanim_keyframe_sel_location(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('location', 's')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('location', 's')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_location.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_location.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('location')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('location')
             cls.deactivate()
         return {'FINISHED'}
 
 #############################
 #Rotation keyframe selecting
 #############################
-class TRANSFORM_OT_rtmanim_keyframe_sel_rotation(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_sel_rotation(bpy.types.Operator):
     bl_label = "Select rotation keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_sel_rotation"
+    bl_idname = "transform.actionedit_keyframe_sel_rotation"
     bl_description = "Select rotation keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -839,23 +839,23 @@ class TRANSFORM_OT_rtmanim_keyframe_sel_rotation(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('r', 's')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('r', 's')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_rotation.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_rotation.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('r')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('r')
             cls.deactivate()
         return {'FINISHED'}
 
 ##########################
 #Scale keyframe selecting
 ##########################
-class TRANSFORM_OT_rtmanim_keyframe_sel_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_sel_scale(bpy.types.Operator):
     bl_label = "Select scale keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_sel_scale"
+    bl_idname = "transform.actionedit_keyframe_sel_scale"
     bl_description = "Select scale keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -879,23 +879,23 @@ class TRANSFORM_OT_rtmanim_keyframe_sel_scale(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('scale', 's')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('scale', 's')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_scale.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_scale.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('scale')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('scale')
             cls.deactivate()
         return {'FINISHED'}
 
 ###############################
 #Location keyframe deselecting
 ###############################
-class TRANSFORM_OT_rtmanim_keyframe_dsel_location(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_dsel_location(bpy.types.Operator):
     bl_label = "Deselect location keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_dsel_location"
+    bl_idname = "transform.actionedit_keyframe_dsel_location"
     bl_description = "Deselect location keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -919,23 +919,23 @@ class TRANSFORM_OT_rtmanim_keyframe_dsel_location(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('location', 'd')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('location', 'd')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_location.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_location.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('location')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('location')
             cls.deactivate()
         return {'FINISHED'}
 
 ###############################
 #Rotation keyframe deselecting
 ###############################
-class TRANSFORM_OT_rtmanim_keyframe_dsel_rotation(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_dsel_rotation(bpy.types.Operator):
     bl_label = "Deselect rotation keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_dsel_rotation"
+    bl_idname = "transform.actionedit_keyframe_dsel_rotation"
     bl_description = "Deselect rotation keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -959,23 +959,23 @@ class TRANSFORM_OT_rtmanim_keyframe_dsel_rotation(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('r', 'd')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('r', 'd')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_rotation.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_rotation.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('r')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('r')
             cls.deactivate()
         return {'FINISHED'}
 
 ############################
 #Scale keyframe deselecting
 ############################
-class TRANSFORM_OT_rtmanim_keyframe_dsel_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_dsel_scale(bpy.types.Operator):
     bl_label = "Deselect scale keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_dsel_scale"
+    bl_idname = "transform.actionedit_keyframe_dsel_scale"
     bl_description = "Deselect scale keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -999,23 +999,23 @@ class TRANSFORM_OT_rtmanim_keyframe_dsel_scale(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('scale', 'd')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('scale', 'd')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_scale.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_del_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_del_scale.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('scale')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('scale')
             cls.deactivate()
         return {'FINISHED'}
 
 ######################################
 #Location keyframe erasing (deleting)
 ######################################
-class TRANSFORM_OT_rtmanim_keyframe_del_location(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_del_location(bpy.types.Operator):
     bl_label = "Delete location keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_del_location"
+    bl_idname = "transform.actionedit_keyframe_del_location"
     bl_description = "Delete location keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1039,23 +1039,23 @@ class TRANSFORM_OT_rtmanim_keyframe_del_location(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('location', 'e')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('location', 'e')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_location.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_location.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_location.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('location')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('location')
             cls.deactivate()
         return {'FINISHED'}
 
 ###########################
 #Rotation keyframe erasing
 ###########################
-class TRANSFORM_OT_rtmanim_keyframe_del_rotation(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_del_rotation(bpy.types.Operator):
     bl_label = "Delete rotation keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_del_rotation"
+    bl_idname = "transform.actionedit_keyframe_del_rotation"
     bl_description = "Delete rotation keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1079,23 +1079,23 @@ class TRANSFORM_OT_rtmanim_keyframe_del_rotation(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('r', 'e')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('r', 'e')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_rotation.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_rotation.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_rotation.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('r')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('r')
             cls.deactivate()
         return {'FINISHED'}
 
 ########################
 #Scale keyframe erasing
 ########################
-class TRANSFORM_OT_rtmanim_keyframe_del_scale(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_keyframe_del_scale(bpy.types.Operator):
     bl_label = "Delete scale keyframes with time slider"
-    bl_idname = "transform.rtmanim_keyframe_del_scale"
+    bl_idname = "transform.actionedit_keyframe_del_scale"
     bl_description = "Delete scale keyframes with time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1119,23 +1119,23 @@ class TRANSFORM_OT_rtmanim_keyframe_del_scale(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop() #stop LRS
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.add_anim_data_path_action('scale', 'e')
-            rval = bpy.ops.transform.rtmanim_modal_keyframe_sel('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_kf_and_tm.stop() #stop LRS
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.add_anim_data_path_action('scale', 'e')
+            rval = bpy.ops.transform.actionedit_modal_keyframe_sel('INVOKE_DEFAULT')
             if 'CANCELLED' not in rval: cls.activate()
-            TRANSFORM_OT_rtmanim_keyframe_sel_scale.deactivate()
-            TRANSFORM_OT_rtmanim_keyframe_dsel_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_sel_scale.deactivate()
+            TRANSFORM_OT_actionedit_keyframe_dsel_scale.deactivate()
         else:
-            TRANSFORM_OT_rtmanim_modal_keyframe_sel.remove_anim_data_path('scale')
+            TRANSFORM_OT_actionedit_modal_keyframe_sel.remove_anim_data_path('scale')
             cls.deactivate()
         return {'FINISHED'}
 
 ################################################################
 #Operator with keyframe info logic, uses a singleton modal loop
 ################################################################
-class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_modal_info_logic(bpy.types.Operator):
     bl_label = "Action Recorder operator"
-    bl_idname = "transform.rtmanim_modal_info_logic"
+    bl_idname = "transform.actionedit_modal_info_logic"
     bl_description = "Action Recorder operator"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
@@ -1148,7 +1148,7 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
     def stop(cls):
         cls.op_running=False
         #deactivate button
-        TRANSFORM_OT_rtmanim_info.deactivate()
+        TRANSFORM_OT_actionedit_info.deactivate()
 
     def invoke(self, context, event):
         cls = self.__class__
@@ -1169,7 +1169,7 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
         #check if need to stop
         #######################
         if cls.op_running!=True:
-            context.scene.rtmanim_keyframe_info_property=''
+            context.scene.actionedit_keyframe_info_property=''
             for areas in bpy.context.screen.areas: areas.tag_redraw()
             try: context.window_manager.event_timer_remove(self._timer)
             except: pass
@@ -1179,7 +1179,7 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
             self._prev_time_duration=self._timer.time_duration
 
             curframe = context.scene.frame_current
-            context.scene.rtmanim_keyframe_info_property=''
+            context.scene.actionedit_keyframe_info_property=''
             info_dict = dict()
 
             ##############################################################
@@ -1216,7 +1216,7 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
             ############################################
             if len(info_dict)==1: 
                 combined_list=list(info_dict.values())[0]
-                context.scene.rtmanim_keyframe_info_property = ', '.join(combined_list)
+                context.scene.actionedit_keyframe_info_property = ', '.join(combined_list)
             elif len(info_dict)>1:
                 combined_list=list()
                 for (name, info_list) in info_dict.items():
@@ -1224,7 +1224,7 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
                         combined_list.append(''.join(('(',name,') ')))
                         for item in info_list: combined_list.extend((item, ', '))
                         combined_list[-1]='  ' #spacing between info for different objects/bones
-                context.scene.rtmanim_keyframe_info_property = ''.join(combined_list)
+                context.scene.actionedit_keyframe_info_property = ''.join(combined_list)
             #update blender gui
             for area in bpy.context.screen.areas: area.tag_redraw()
 
@@ -1233,9 +1233,9 @@ class TRANSFORM_OT_rtmanim_modal_info_logic(bpy.types.Operator):
 ########################
 #Keyframe info operator
 ########################
-class TRANSFORM_OT_rtmanim_info(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_info(bpy.types.Operator):
     bl_label = "Show info about keyframes under the time slider"
-    bl_idname = "transform.rtmanim_info"
+    bl_idname = "transform.actionedit_info"
     bl_description = "Show info about keyframes under the time slider"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1259,19 +1259,19 @@ class TRANSFORM_OT_rtmanim_info(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            bpy.ops.transform.rtmanim_modal_info_logic('INVOKE_DEFAULT')
+            bpy.ops.transform.actionedit_modal_info_logic('INVOKE_DEFAULT')
             cls.activate()
         else:
-            TRANSFORM_OT_rtmanim_modal_info_logic.stop()
+            TRANSFORM_OT_actionedit_modal_info_logic.stop()
             cls.deactivate()
         return {'FINISHED'}
 
 #################################################################
 #Operator with smooth follow logic. Uses a singleton modal loop.
 #################################################################
-class TRANSFORM_OT_rtmanim_modal_smooth_follow_logic(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_modal_smooth_follow_logic(bpy.types.Operator):
     bl_label = "Action Recorder operator"
-    bl_idname = "transform.rtmanim_modal_smooth_follow_logic"
+    bl_idname = "transform.actionedit_modal_smooth_follow_logic"
     bl_description = "Action Recorder operator"
     bl_options = {'REGISTER', 'UNDO'}
     @classmethod
@@ -1284,7 +1284,7 @@ class TRANSFORM_OT_rtmanim_modal_smooth_follow_logic(bpy.types.Operator):
     def stop(cls):
         cls.op_running=False
         #deactivate button
-        TRANSFORM_OT_rtmanim_smooth_follow.deactivate()
+        TRANSFORM_OT_actionedit_smooth_follow.deactivate()
         
     #various controls
     active_or_not=None
@@ -1316,8 +1316,8 @@ class TRANSFORM_OT_rtmanim_modal_smooth_follow_logic(bpy.types.Operator):
 
         if event.type=='LEFT_CTRL' and event.value=='PRESS':
             #user input direction vector, uses local coords for each object
-            cls.dir_unit_vector = Vector((float(context.scene.rtmanim_smooth_follow_x_property),
-                float(context.scene.rtmanim_smooth_follow_y_property), float(context.scene.rtmanim_smooth_follow_z_property)))
+            cls.dir_unit_vector = Vector((float(context.scene.actionedit_smooth_follow_x_property),
+                float(context.scene.actionedit_smooth_follow_y_property), float(context.scene.actionedit_smooth_follow_z_property)))
             cls.dir_unit_vector.normalize()
             #get selected objects
             if context.mode=='POSE': cls.objects = context.selected_pose_bones
@@ -1363,7 +1363,7 @@ class TRANSFORM_OT_rtmanim_modal_smooth_follow_logic(bpy.types.Operator):
                 #Below vector is in object's modified coord system. Note, (location3d-origin_vector) is in world coords.
                 location_difference_vector = current_quaternion @ total_inv_q @ (location3d-origin_vector)
                 #move by percentage of distance
-                obj.location += location_difference_vector*context.scene.rtmanim_smooth_follow_factor_property/100.0
+                obj.location += location_difference_vector*context.scene.actionedit_smooth_follow_factor_property/100.0
 
                 ########################################################
                 #rotation, calculated in object's modified coord system
@@ -1388,9 +1388,9 @@ class TRANSFORM_OT_rtmanim_modal_smooth_follow_logic(bpy.types.Operator):
 ########################
 #Smooth follow operator
 ########################
-class TRANSFORM_OT_rtmanim_smooth_follow(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_smooth_follow(bpy.types.Operator):
     bl_label = "Make objects follow the mouse, use left Ctrl to start/pause"
-    bl_idname = "transform.rtmanim_smooth_follow"
+    bl_idname = "transform.actionedit_smooth_follow"
     bl_description = "Make objects follow the mouse, use left Ctrl to start/pause"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1414,20 +1414,20 @@ class TRANSFORM_OT_rtmanim_smooth_follow(bpy.types.Operator):
     def execute(self, context):
         cls=self.__class__
         if not cls.active:
-            TRANSFORM_OT_rtmanim_modal_info_logic.stop() #stop info
-            bpy.ops.transform.rtmanim_modal_smooth_follow_logic('INVOKE_DEFAULT')
+            TRANSFORM_OT_actionedit_modal_info_logic.stop() #stop info
+            bpy.ops.transform.actionedit_modal_smooth_follow_logic('INVOKE_DEFAULT')
             cls.activate()
         else:
-            TRANSFORM_OT_rtmanim_modal_smooth_follow_logic.stop()
+            TRANSFORM_OT_actionedit_modal_smooth_follow_logic.stop()
             cls.deactivate()
         return {'FINISHED'}
 
 ###################
 #Stop all operator
 ###################
-class TRANSFORM_OT_rtmanim_stop_all(bpy.types.Operator):
+class TRANSFORM_OT_actionedit_stop_all(bpy.types.Operator):
     bl_label = "Deactivate all buttons"
-    bl_idname = "transform.rtmanim_stop_all"
+    bl_idname = "transform.actionedit_stop_all"
     bl_description = "Deactivate all buttons"
     bl_options = {'REGISTER'}
     @classmethod
@@ -1435,90 +1435,92 @@ class TRANSFORM_OT_rtmanim_stop_all(bpy.types.Operator):
 
     def execute(self, context):
         #make all modals stop and exit
-        TRANSFORM_OT_rtmanim_modal_kf_and_tm.stop()
-        TRANSFORM_OT_rtmanim_modal_keyframe_sel.stop()
-        TRANSFORM_OT_rtmanim_modal_smooth_follow_logic.stop()
-        TRANSFORM_OT_rtmanim_modal_info_logic.stop()
+        TRANSFORM_OT_actionedit_modal_kf_and_tm.stop()
+        TRANSFORM_OT_actionedit_modal_keyframe_sel.stop()
+        TRANSFORM_OT_actionedit_modal_smooth_follow_logic.stop()
+        TRANSFORM_OT_actionedit_modal_info_logic.stop()
         return {'FINISHED'}
 
 ##############
-#Registration
+# Registration
 ##############
 def register():
-    #classes
-    bpy.utils.register_class(VIEW3D_PT_rtmanim_panel)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_modal_kf_and_tm)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_move)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_rotate)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_location)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_location)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_rotation)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_rotation)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_modal_keyframe_sel)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_sel_location)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_sel_rotation)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_sel_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_dsel_location)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_dsel_rotation)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_dsel_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_del_location)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_del_rotation)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_keyframe_del_scale)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_modal_smooth_follow_logic)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_smooth_follow)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_modal_info_logic)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_info)
-    bpy.utils.register_class(TRANSFORM_OT_rtmanim_stop_all)
-    #properties
-    bpy.types.Scene.rtmanim_time_property = bpy.props.IntProperty(name="Pause", description="How long to pause before advancing current frame", min=0, default=0)
-    bpy.types.Scene.rtmanim_lkeyframe_frequency_property = bpy.props.IntProperty(name="", description="Spacing between location keyframes", min=1, default=2)
-    bpy.types.Scene.rtmanim_rkeyframe_frequency_property = bpy.props.IntProperty(name="", description="Spacing between rotation keyframes", min=1, default=2)
-    bpy.types.Scene.rtmanim_skeyframe_frequency_property = bpy.props.IntProperty(name="", description="Spacing between scale keyframes", min=1, default=2)
-    bpy.types.Scene.rtmanim_smooth_follow_factor_property = bpy.props.FloatProperty(name="Follow", description="How quickly to follow the mouse, 0 to 100", min=0, max=100, default=5)
-    bpy.types.Scene.rtmanim_smooth_follow_x_property = bpy.props.FloatProperty(name="X", description="Direction vector X component", default=0.0)
-    bpy.types.Scene.rtmanim_smooth_follow_y_property = bpy.props.FloatProperty(name="Y", description="Direction vector Y component", default=0.0)
-    bpy.types.Scene.rtmanim_smooth_follow_z_property = bpy.props.FloatProperty(name="Z", description="Direction vector Z component", default=1.0)
-    bpy.types.Scene.rtmanim_keyframe_info_property = bpy.props.StringProperty(name="", description="Keyframe info", default="")
+    # classes
+    bpy.utils.register_class(DOPESHEET_PT_ARFB)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_modal_kf_and_tm)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_move)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_rotate)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_location)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_next_location)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_rotation)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_next_rotation)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_insert_next_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_modal_keyframe_sel)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_sel_location)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_sel_rotation)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_sel_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_dsel_location)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_dsel_rotation)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_dsel_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_del_location)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_del_rotation)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_keyframe_del_scale)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_modal_smooth_follow_logic)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_smooth_follow)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_modal_info_logic)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_info)
+    bpy.utils.register_class(TRANSFORM_OT_actionedit_stop_all)
+    # properties
+    bpy.types.Scene.actionedit_time_property                    = bpy.props.IntProperty(  name="Pause", description="How long to pause before advancing current frame", min=0, default=0)
+    bpy.types.Scene.actionedit_lkeyframe_frequency_property      = bpy.props.IntProperty(  name="",      description="Spacing between location keyframes",     min=1, default=2)
+    bpy.types.Scene.actionedit_rkeyframe_frequency_property      = bpy.props.IntProperty(  name="",      description="Spacing between rotation keyframes",     min=1, default=2)
+    bpy.types.Scene.actionedit_skeyframe_frequency_property      = bpy.props.IntProperty(  name="",      description="Spacing between scale keyframes",        min=1, default=2)
+    bpy.types.Scene.actionedit_smooth_follow_factor_property     = bpy.props.FloatProperty(name="Follow", description="How quickly to follow the mouse, 0 to 100", min=0, max=100, default=5)
+    bpy.types.Scene.actionedit_smooth_follow_x_property          = bpy.props.FloatProperty(name="X",      description="Direction vector X component", default=0.0)
+    bpy.types.Scene.actionedit_smooth_follow_y_property          = bpy.props.FloatProperty(name="Y",      description="Direction vector Y component", default=0.0)
+    bpy.types.Scene.actionedit_smooth_follow_z_property          = bpy.props.FloatProperty(name="Z",      description="Direction vector Z component", default=1.0)
+    bpy.types.Scene.actionedit_keyframe_info_property            = bpy.props.StringProperty(name="",      description="Keyframe info",                        default="")
+
 def unregister():
-    #classes
-    bpy.utils.unregister_class(VIEW3D_PT_rtmanim_panel)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_modal_kf_and_tm)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_move)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_rotate)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_location)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_location)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_rotation)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_rotation)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_prev_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_insert_next_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_modal_keyframe_sel)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_sel_location)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_sel_rotation)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_sel_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_dsel_location)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_dsel_rotation)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_dsel_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_del_location)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_del_rotation)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_keyframe_del_scale)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_modal_smooth_follow_logic)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_smooth_follow)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_modal_info_logic)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_info)
-    bpy.utils.unregister_class(TRANSFORM_OT_rtmanim_stop_all)
-    #properties
-    del bpy.types.Scene.rtmanim_time_property
-    del bpy.types.Scene.rtmanim_lkeyframe_frequency_property
-    del bpy.types.Scene.rtmanim_rkeyframe_frequency_property
-    del bpy.types.Scene.rtmanim_skeyframe_frequency_property
-    del bpy.types.Scene.rtmanim_smooth_follow_factor_property
-    del bpy.types.Scene.rtmanim_smooth_follow_x_property
-    del bpy.types.Scene.rtmanim_smooth_follow_y_property
-    del bpy.types.Scene.rtmanim_smooth_follow_z_property
-    del bpy.types.Scene.rtmanim_keyframe_info_property
+    # classes
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_stop_all)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_info)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_modal_info_logic)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_smooth_follow)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_modal_smooth_follow_logic)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_del_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_del_rotation)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_del_location)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_dsel_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_dsel_rotation)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_dsel_location)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_sel_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_sel_rotation)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_sel_location)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_modal_keyframe_sel)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_next_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_next_rotation)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_rotation)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_next_location)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_keyframe_insert_prev_location)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_scale)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_rotate)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_move)
+    bpy.utils.unregister_class(TRANSFORM_OT_actionedit_modal_kf_and_tm)
+    bpy.utils.unregister_class(DOPESHEET_PT_ARFB)
+    # properties
+    del bpy.types.Scene.actionedit_keyframe_info_property
+    del bpy.types.Scene.actionedit_smooth_follow_z_property
+    del bpy.types.Scene.actionedit_smooth_follow_y_property
+    del bpy.types.Scene.actionedit_smooth_follow_x_property
+    del bpy.types.Scene.actionedit_smooth_follow_factor_property
+    del bpy.types.Scene.actionedit_skeyframe_frequency_property
+    del bpy.types.Scene.actionedit_rkeyframe_frequency_property
+    del bpy.types.Scene.actionedit_lkeyframe_frequency_property
+    del bpy.types.Scene.actionedit_time_property
+
 if __name__ == '__main__':
     register()
